@@ -8,7 +8,7 @@ function App() {
       <div className="hidden sm:block">
         <Sidebar />
       </div>
-      <div className="flex-1 bg-slate-100 ml-64">
+      <div className="flex-1 bg-slate-100 sm:ml-64">
         <TopNav />
         <main className="p-8 h-[calc(100vh-4rem)]">
           <Dashboard />

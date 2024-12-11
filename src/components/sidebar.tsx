@@ -6,7 +6,7 @@ import menus from "./menu";
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 h-screen shadow absolute bg-white">
+    <aside className="w-64 h-screen shadow absolute bg-white "  aria-label="Sidebar">
       <div className="h-16 flex gap-2 items-center p-4">
         <Logo height={40} />
         <div>
