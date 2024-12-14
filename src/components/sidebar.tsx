@@ -2,21 +2,23 @@ import Logo from "./logo";
 import SidebarItems from "./sidebar-items";
 import menus from "./menu";
 
-const Sidebar = () => {
+const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
   return (
-    <aside className="w-64 h-screen shadow absolute bg-white "  aria-label="Sidebar">
-      <div className="h-16 flex gap-2 items-center p-4">
+    <aside>
+      <div className={`h-16 flex items-center p-4 ${collapsed ? "justify-center" : "gap-2"}`}>
         <Logo height={40} />
-        <div>
-          <h4 className="font-bold text-lg leading-6 ">Wecommerce</h4>
-          <p className="text-sm leading-5 ">Admin Dashboard</p>
-        </div>
+        {!collapsed && (
+          <div>
+            <h4 className="font-bold text-lg leading-6">Wecommerce</h4>
+            <p className="text-sm leading-5">Admin Dashboard</p>
+          </div>
+        )}
       </div>
       <ul className="p-4 space-y-1">
         {menus.map((item, index) => (
           <SidebarItems
             key={index}
-            name={item.name}
+            name={collapsed ? "" : item.name}
             icon={item.icon}
             isActive={item.isActive}
           />
