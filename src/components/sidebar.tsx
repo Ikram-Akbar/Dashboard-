@@ -2,8 +2,6 @@ import Logo from "./logo";
 import SidebarItems from "./sidebar-items";
 import menus from "./menu";
 
-
-
 const Sidebar = () => {
   return (
     <aside className="w-64 h-screen shadow absolute bg-white "  aria-label="Sidebar">
